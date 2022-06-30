@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-dotenv.config({ path: './.env' })
+dotenv.config({ path: '.env' })
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
