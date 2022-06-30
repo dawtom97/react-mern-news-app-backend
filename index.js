@@ -20,13 +20,14 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
+const CONNECTION_URL='mongodb+srv://valharim:Student997@cluster0.skuug.mongodb.net/news-app-db?retryWrites=true&w=majority';
 
 mongoose
-  .connect(process.env.CONNECTION_URL, {
+  .connect(CONNECTION_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => app.listen(process.env.PORT, () => console.log("działa")))
+  .then(() => app.listen(PORT, () => console.log("działa")))
   .catch((err) => console.log(err));
 
 //mongoose.set('useFindAndModify',false);
